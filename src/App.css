@@ -1,38 +1,432 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+.full {
+  width: 100%;
+  min-height: 100vh
+}
+
+.full20 {
+  width: 100%;
+  min-height: 20vh
+}
+
+.full40 {
+  width: 100%;
+  min-height: 40vh
+}
+
+.full60 {
+  width: 100%;
+  min-height: 60vh
+}
+
+.full80 {
+  width: 100%;
+  min-height: 80vh
+}
+
+.fullContainer {
+  width: 100%;
+  min-height: 90vh
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.centerW{
+  justify-content: center
+}
+
+.centerH{
+  display: flex;
+  align-items: center
+}
+
+.toRight1{
+  display: flex;
+  justify-content: right;
+  align-items: flex-end
+}
+
+.whiteFont {
+  color: #fff
+}
+
+.blueFont {
+  color: #2CA8FF
+}
+
+.toRight {
+  float: right;
+}
+
+.mainColorBk {
+  background-color: #2CA8FF;
+}
+
+.blackColorBk {
+  background-color: #000;
+}
+
+.inline{
+  display: flex;
+  flex-direction: row
+}
+
+.inlineRight{
+  display: flex;
+  justify-content: flex-end;
+  color: aquamarine
+}
+
+.title {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 2em
+}
+
+.padding03{
+  padding: 3px
+}
+
+.padding04{
+  padding: 4px
+}
+
+.padding10 {
+  padding: 10px;
+}
+
+.padding20 {
+  padding: 20px;
+}
+
+.padding30 {
+  padding: 30px;
+}
+
+.padding20Side {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.padding5Side {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.padding50Side {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.padding50Top {
+  padding-top: 50px;
+}
+
+.padding100Top {
+  padding-top: 100px;
+}
+
+.margin2 {
+  margin: 2px;
+}
+
+.margin5 {
+  margin: 5px;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.topLess1 {
+  margin-top: -1px
+}
+
+.top10 {
+  margin-top: 10px
+}
+
+.top40 {
+  margin-top: 40px
+}
+
+.bottom30 {
+  margin-bottom: 30px
+}
+
+.sideSpace {
+  margin-left: 2px;
+  margin-right: 2px
+}
+
+.corr {
+  background-color: aquamarine
+}
+
+/*
+  Mascara para ficar sobre backgroundImgs, 
+  assim deixa as imagens mais escuras
+*/
+
+.blackMask06{
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px
+}
+
+.blueMask06{
+  background-color: rgba(44, 168, 255,0.6); 
+  border-radius: 5px
+}
+
+.blueMask01{
+  background-color: rgba(44, 168, 255,0.1); 
+  border-radius: 5px
+}
+
+.redMask06{
+  background-color: rgba(255, 0, 0,0.6); 
+  border-radius: 5px
+}
+
+/*
+  Botão com backgroundColor branco e fonte azul
+*/
+.btWhite {
+  padding: 15px 50px 15px 50px;
+  background-color: #fff;
+  border-radius: 30px;
+  border: none;
+  color: #2CA8FF;
+  transition: all 0.2s
+}
+
+.btWhite:hover {
+  opacity: 0.7;
+  cursor: pointer
+}
+
+/*
+  Botão com backgroundColor Azul e fonte Branca
+*/
+.btBlue {
+  padding: 15px 50px 15px 50px;
+  background-color: #2CA8FF;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  transition: all 0.2s
+}
+
+.btBlue:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  color: #fff;
+}
+
+/*
+  Componente utiliza 100% do espaço em largura(Width),
+  pode ser utilizado com qualquer div, bt...
+*/
+.w100 {
+  width: 100%;
+}
+
+/*
+  Texto alinhado a...
+*/
+.textCenter {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.textRight {
+  text-align: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.delay{ /* SEMPRE que ouver a troca de classes tendo essa classe tbm esse delay vai funcionar*/
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.delay2{
+	-webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.menu_nav_bar{
+	background-color: #000;
+	padding: 10px;
+	border: solid #000 1px;
+	border-radius: 0px;
+  font: #fafafa;
+  opacity: 0.7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.invisible {
+  display: none;
+}
+
+.menu_options{
+	color: #fff;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+}
+
+span{
+	color: #2CA8FF;
+}
+
+/* Person aliza o ScrollBar */
+::-webkit-scrollbar {
+  width: 10px;
+  /* display: none; */
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(44, 168, 255,0.7); 
+  -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.5); 
+}
+
+/* *************** */
+
+.circulo {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #666;
+  border: 6px solid #199EB8;
+  border-radius: 50%;
+  padding: 55px 25px 0 25px;
+  position: relative;
+}
+
+.circulo .detalhe {
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  top: -25px;
+  right: -15px;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  background-color: #E04F00;
+  position: absolute;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.circulo:hover {
+  border: 6px solid tomato;
+}
+
+/* personaliza o botao do icone */
+.icone_servico{
+	background-color: #028fcc;
+	width: 90px;
+	height: 90px;
+	color: white;
+}
+.icone_servico:HOVER{
+	background-color: #2E2E2E;
+}
+
+/* Personaliza o icone */
+.icone_servico_logo{
+	color: white;
+	font-size: 40px;
+}
+
+.mainTitle h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.opacitybk03 {
+  /* background-color: rgba(44, 168, 255,0.3);  */
+  background-color: rgba(44, 168, 255,0.1); 
+  border: none;
+}
+
+.borderWhite {
+  border: solid #fff 1px;
+}
+
+.errorBk {
+  background-color: #A2250A;
+  border: none;
+  color: #fff;
+}
+
+.successBk {
+  background-color: #04B45F;
+  border: none;
+  color: #fff;
+}
+
+.topBlueBorder {
+  border-top: solid #2CA8FF 1.5px;
+}
+
+.iconBox{
+  padding: 3px;
+  font-size: 20px;
+}
+
+.margin1 {
+  margin: 1px;
+}
+
+.margin2 {
+  margin: 2px;
+}
+
+.lessTopMarge70 {
+  margin-top: -70px;
+}
+
+.boxShadow {
+  box-shadow:0 10px 16px 0 rgba(0,0,0,0.2)
+}
+
+.disable {
+  opacity: 0.3;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.shadowCircle {
+  border-radius: 100%;
+  box-shadow:0 10px 16px 0 rgba(0,0,0,0.2);
+  background-color: #666;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  opacity: 0.6;
 }
